@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICECAT ($ICECAT) — HYPE × ICE on HyperEVM</title>
+  <meta name="description" content="ICECAT — the ice cat for the collab between HYPE and ICE. HyperEVM meme. Pair to both." />
+  <meta property="og:title" content="ICECAT ($ICECAT)" />
+  <meta property="og:description" content="we got the ice cat for the collab between hype and ice? we can pair to both." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js"></script>
+</head>
+<body>
+  <canvas id="ice-canvas" aria-hidden="true"></canvas>
+  <div class="fx-vignette" aria-hidden="true"></div>
+  <div class="fx-frost" aria-hidden="true"></div>
+
+  <!-- ENTER GATE -->
+  <div id="gate" class="gate" role="dialog" aria-label="Enter ICECAT">
+    <div class="gate__inner">
+      <img class="gate__logo" src="assets/logo.png" alt="" width="120" height="120" />
+      <pre class="gate__ascii" aria-hidden="true">  /\___/\
+ (  o o  )
+  >  ^  <
+   ICECAT</pre>
+      <h1 class="gate__title">ENTER THE ICE</h1>
+      <p class="gate__sub">HYPE × ICE · HyperEVM</p>
+      <button type="button" id="gate-enter" class="gate__btn">CLICK TO ENTER</button>
+      <p class="gate__mute">audio optional · your call</p>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#hero">
+      <img src="assets/logo.png" alt="" width="36" height="36" />
+      <span>ICECAT</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#lore">Lore</a>
+      <a href="#buy">How to buy</a>
+      <a href="#chart">Chart</a>
+      <a href="#vault">Vault</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav__cta" id="nav-buy" href="#">Buy</a>
+    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </header>
+  <div class="nav-mobile" id="nav-mobile" hidden>
+    <a href="#lore">Lore</a>
+    <a href="#buy">How to buy</a>
+    <a href="#chart">Chart</a>
+    <a href="#vault">Vault</a>
+    <a href="#faq">FAQ</a>
+    <a href="#" id="nav-buy-m">Buy</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <img src="assets/hero.jpg" alt="ICECAT — ASCII cat meets ice cubes" />
+        <div class="hero__shade"></div>
+      </div>
+      <div class="hero__content">
+        <p class="eyebrow">HyperEVM · Hyperliquid meme</p>
+        <h1 class="hero__title">
+          <span class="hero__word">ICECAT</span>
+          <span class="hero__tick">$ICECAT</span>
+        </h1>
+        <p class="hero__tag">we got the ice cat for the collab between <em>hype</em> and <em>ice</em> — pair to both.</p>
+
+        <!-- CA PILL -->
+        <div class="ca-pill" id="ca-pill">
+          <span class="ca-pill__label">CA</span>
+          <code class="ca-pill__addr" id="ca-addr">COMING_SOON</code>
+          <button type="button" class="ca-pill__copy" id="ca-copy" aria-label="Copy contract address">Copy</button>
+        </div>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" id="btn-buy" href="#">Buy</a>
+          <a class="btn btn--ghost" id="btn-chart" href="#chart">Chart</a>
+          <a class="btn btn--ghost" id="btn-x" href="https://x.com/thedevrrrrrrr/status/2116574324710633923" target="_blank" rel="noopener">X</a>
+        </div>
+        <p class="hero__pair-note" id="pair-note">Dex pair drops here when live — paste into <code>config.js</code>.</p>
+      </div>
+      <div class="hero__float" aria-hidden="true">
+        <img src="assets/logo.png" alt="" class="mascot" />
+      </div>
+    </section>
+
+    <!-- BANNER STRIP -->
+    <div class="banner-strip">
+      <img src="assets/banner-1500x500.jpg" alt="ICECAT banner" width="1500" height="500" />
+    </div>
+
+    <!-- LORE -->
+    <section class="section lore" id="lore">
+      <div class="section__head">
+        <p class="eyebrow">Narrative</p>
+        <h2>HYPE × ICE.<br />One cat. Both lanes.</h2>
+      </div>
+      <div class="lore__grid">
+        <article class="lore-card">
+          <div class="lore-card__icon" aria-hidden="true">🧊</div>
+          <h3>Ice + Hype collab</h3>
+          <p>Hyperliquid welcomed ICE Markets into the ecosystem. The timeline answered with an ASCII ice cat. That’s the spark.</p>
+        </article>
+        <article class="lore-card">
+          <div class="lore-card__icon" aria-hidden="true">⚡</div>
+          <h3>HyperEVM native</h3>
+          <p>Not a Solana trench clone. ICECAT lives on HyperEVM — HYPE for gas, HyperEVM DEXes for the swap.</p>
+        </article>
+        <article class="lore-card">
+          <div class="lore-card__icon" aria-hidden="true">⟡</div>
+          <h3>Pair to both</h3>
+          <p>HYPE narrative. ICE narrative. One ticker that sits in the middle of the collab meme.</p>
+        </article>
+        <article class="lore-card lore-card--ascii">
+          <pre class="ascii-block" aria-hidden="true">  /\___/\   +  🧊
+ (  ˘ ˘  )
+  >  ᵕ  <
+   ICECAT</pre>
+          <h3>ASCII cat lore</h3>
+          <p>Lo-fi kaomoji cat + frost cubes. The brand is the joke and the receipt.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- HOW TO BUY -->
+    <section class="section buy" id="buy">
+      <div class="section__head">
+        <p class="eyebrow">HyperEVM</p>
+        <h2>How to buy</h2>
+        <p class="section__lead">Four steps. No Solana. Wallet → HYPE gas → HyperEVM DEX → paste CA.</p>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step__n">01</span>
+          <div>
+            <h3>Get a HyperEVM wallet</h3>
+            <p>Use a wallet that supports HyperEVM / Hyperliquid EVM (e.g. Rabby, MetaMask with HyperEVM RPC).</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__n">02</span>
+          <div>
+            <h3>Bridge / hold HYPE for gas</h3>
+            <p>Fund the wallet with HYPE on HyperEVM so you can pay gas for swaps.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__n">03</span>
+          <div>
+            <h3>Open a HyperEVM DEX</h3>
+            <p>Use a HyperEVM DEX or aggregator. Keep this site’s official CA only.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__n">04</span>
+          <div>
+            <h3>Paste CA · swap</h3>
+            <p>Copy the CA from the pill above when it goes live. Never trust a random DM CA.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CHART -->
+    <section class="section chart" id="chart">
+      <div class="section__head">
+        <p class="eyebrow">Market</p>
+        <h2>Chart</h2>
+      </div>
+      <div id="chart-empty" class="chart-empty">
+        <p>Pair not live yet. When <code>dexscreenerPair</code> is set in <code>config.js</code>, the DexScreener chart and stats appear here.</p>
+      </div>
+      <div id="chart-live" class="chart-live" hidden>
+        <div class="stats" id="dex-stats">
+          <div class="stat"><span>Price</span><strong id="stat-price">—</strong></div>
+          <div class="stat"><span>Liquidity</span><strong id="stat-liq">—</strong></div>
+          <div class="stat"><span>24h Vol</span><strong id="stat-vol">—</strong></div>
+          <div class="stat"><span>FDV</span><strong id="stat-fdv">—</strong></div>
+        </div>
+        <div class="chart-frame">
+          <iframe id="dex-iframe" title="DexScreener chart" loading="lazy" allow="clipboard-write"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- TWEET -->
+    <section class="section signal" id="signal">
+      <div class="section__head">
+        <p class="eyebrow">Signal</p>
+        <h2>The post that started it</h2>
+      </div>
+      <div class="tweet-wrap">
+        <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true">
+          <a href="https://x.com/thedevrrrrrrr/status/2116574324710633923">Loading post…</a>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- VAULT -->
+    <section class="section vault" id="vault">
+      <div class="section__head">
+        <p class="eyebrow">Meme vault</p>
+        <h2>Text-free ice art</h2>
+      </div>
+      <div class="vault__grid">
+        <figure class="vault__item"><img src="assets/vault1.jpg" alt="ICECAT vault art 1" loading="lazy" /></figure>
+        <figure class="vault__item"><img src="assets/vault2.jpg" alt="ICECAT vault art 2" loading="lazy" /></figure>
+        <figure class="vault__item"><img src="assets/og.jpg" alt="ICECAT vault art 3" loading="lazy" /></figure>
+        <figure class="vault__item vault__item--logo"><img src="assets/logo.png" alt="ICECAT ASCII logo" loading="lazy" /></figure>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="section__head">
+        <p class="eyebrow">Trust</p>
+        <h2>FAQ · anti-scam</h2>
+      </div>
+      <div class="faq__list">
+        <details open>
+          <summary>What chain is ICECAT on?</summary>
+          <p>HyperEVM (Hyperliquid ecosystem). Not Solana. How-to-buy steps use a HyperEVM wallet and HYPE for gas.</p>
+        </details>
+        <details>
+          <summary>Where is the contract address?</summary>
+          <p>Only the CA shown in the pill on this site (or your official channels): <code>0xe5e14b768d2667760e6ccfaeb186a83d3d03577a</code>. Anyone DMing a different CA is a scam.</p>
+        </details>
+        <details>
+          <summary>What is the narrative?</summary>
+          <p>Hyperliquid welcomed ICE Markets. The meme is the ice cat for that collab — HYPE × ICE — so the ticker can pair to both stories.</p>
+        </details>
+        <details>
+          <summary>Is there a chart yet?</summary>
+          <p>Live on HyperEVM via HyperSwap (ICECAT/WHYPE). Chart embeds from DexScreener on this page; open the full chart from the Chart button.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <img src="assets/logo.png" alt="" width="40" height="40" />
+      <div>
+        <strong>ICECAT</strong>
+        <span>$ICECAT · HyperEVM</span>
+      </div>
+    </div>
+    <p class="footer__warn">Meme coin. Not financial advice. Official CA only — ignore DMs.</p>
+    <p class="footer__copy">© ICECAT</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden>Copied</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="main.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>
